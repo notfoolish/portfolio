@@ -82,29 +82,13 @@ export default function App() {
       </div>
 
       <div className="content">
-        <header className="nav" style={{ height: NAV_HEIGHT }}>
-          <div className="nav__inner">
-            <nav aria-label="Primary">
-              <ul className="nav__links">
-                <li>
-                  <Link to="about" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>About</Link>
-                </li>
-                <li>
-                  <Link to="tech" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Tech Stack</Link>
-                </li>
-                <li>
-                  <Link to="projects" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Projects</Link>
-                </li>
-                <li>
-                  <Link to="contact" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Contact</Link>
-                </li>
-                <li>
-                  <Link to="resume" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Resume</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </header>
+        <nav className="nav">
+          <Link to="about" smooth={true} duration={500} offset={-NAV_HEIGHT}>About</Link>
+          <Link to="tech" smooth={true} duration={500} offset={-NAV_HEIGHT}>Tech Stack</Link>
+          <Link to="projects" smooth={true} duration={500} offset={-NAV_HEIGHT}>Projects</Link>
+          <Link to="contact" smooth={true} duration={500} offset={-NAV_HEIGHT}>Contact</Link>
+          <Link to="resume" smooth={true} duration={500} offset={-NAV_HEIGHT}>Resume</Link>
+        </nav>
 
         <main>
           <section id="home" className="section" style={{ scrollMarginTop: NAV_HEIGHT + 16 }}>

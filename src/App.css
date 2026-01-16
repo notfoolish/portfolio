@@ -24,60 +24,32 @@
   position: sticky;
   top: 0;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 16px;
   backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.6);
   border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
 }
 
-.nav__inner {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
+@media (min-width: 768px) {
+  .nav {
+    gap: 80px;
+    padding: 24px;
+  }
 }
 
-.nav__brand {
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.nav__links {
-  list-style: none;
-  display: flex;
-  gap: 0;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav__links li:not(:last-child)::after {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 20px;
-  background: linear-gradient(180deg, 
-    transparent, 
-    rgba(141, 125, 202, 0.5) 20%, 
-    rgba(141, 125, 202, 0.5) 80%, 
-    transparent
-  );
-  margin: 0 12px;
-}
-
-.nav__links a {
-  display: inline-block;
-  padding: 10px 12px;
-  border-radius: 10px;
+.nav a {
   color: var(--muted);
-  border: 1px solid transparent;
+  transition: color 0.2s;
+  cursor: pointer;
 }
 
-.nav__links a:hover {
-  color: var(--text);
-  border-color: var(--border);
-  background: rgba(255, 255, 255, 0.06);
+.nav a:hover {
+  color: var(--text);;
 }
 
 p{
