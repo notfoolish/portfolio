@@ -1,5 +1,6 @@
 import './App.css'
 import { ShaderGradient, ShaderGradientCanvas } from '@shadergradient/react'
+import { Link } from 'react-scroll'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faLocationDot,
@@ -86,16 +87,19 @@ export default function App() {
             <nav aria-label="Primary">
               <ul className="nav__links">
                 <li>
-                  <a href="#about">About</a>
+                  <Link to="about" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>About</Link>
                 </li>
                 <li>
-                  <a href="#tech">Tech Stack</a>
+                  <Link to="tech" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Tech Stack</Link>
                 </li>
                 <li>
-                  <a href="#projects">Projects</a>
+                  <Link to="projects" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Projects</Link>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <Link to="contact" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Contact</Link>
+                </li>
+                <li>
+                  <Link to="resume" smooth={true} duration={500} offset={-(NAV_HEIGHT + 16)}>Resume</Link>
                 </li>
               </ul>
             </nav>
@@ -279,9 +283,6 @@ export default function App() {
           </a>
           <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" title="Facebook">
             <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" title="Instagram">
-            <FontAwesomeIcon icon={faInstagram} />
           </a>
         </aside>
       </div>

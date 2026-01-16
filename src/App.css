@@ -45,10 +45,25 @@
 .nav__links {
   list-style: none;
   display: flex;
-  gap: 16px;
+  gap: 0;
   padding: 0;
   margin: 0;
   justify-content: center;
+  align-items: center;
+}
+
+.nav__links li:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background: linear-gradient(180deg, 
+    transparent, 
+    rgba(141, 125, 202, 0.5) 20%, 
+    rgba(141, 125, 202, 0.5) 80%, 
+    transparent
+  );
+  margin: 0 12px;
 }
 
 .nav__links a {
