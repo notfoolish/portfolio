@@ -6,6 +6,8 @@ import {
   faEnvelope,
   faPhone,
   faPaperPlane,
+  faBolt,
+  faDatabase,
 } from '@fortawesome/free-solid-svg-icons'
 import {
   faLinkedin,
@@ -21,6 +23,7 @@ import {
   faJava,
   faFigma,
   faJira,
+  faSwift,
 } from '@fortawesome/free-brands-svg-icons'
 
 const NAV_HEIGHT = 72
@@ -83,10 +86,13 @@ export default function App() {
             <nav aria-label="Primary">
               <ul className="nav__links">
                 <li>
-                  <a href="#projects">Projects</a>
+                  <a href="#about">About</a>
                 </li>
                 <li>
-                  <a href="#about">About</a>
+                  <a href="#tech">Tech Stack</a>
+                </li>
+                <li>
+                  <a href="#projects">Projects</a>
                 </li>
                 <li>
                   <a href="#contact">Contact</a>
@@ -115,9 +121,11 @@ export default function App() {
               <p>
                 I'm a fullstack junior software developer always eager to learn something new.
               </p>
-
-              <h3 style={{ marginTop: '40px' }}>Tech Stack</h3>
-              
+            </div>
+          </section>
+          <section id="tech" className="section" style={{ scrollMarginTop: NAV_HEIGHT + 16 }}>
+            <div className="container">
+              <h2>Tech Stack</h2>
               <div className="tech-section">
                 <h4>Frontend</h4>
                 <div className="tech-grid">
@@ -134,11 +142,11 @@ export default function App() {
                     <span>HTML5</span>
                   </div>
                   <div className="tech-item">
-                    <div className="tailwind-icon">TW</div>
+                    <div className="tailwind-icon"> </div>
                     <span>Tailwind</span>
                   </div>
                   <div className="tech-item">
-                    <div className="vite-icon">⚡</div>
+                    <FontAwesomeIcon icon={faBolt} />
                     <span>Vite</span>
                   </div>
                 </div>
@@ -160,7 +168,15 @@ export default function App() {
                     <span>Java</span>
                   </div>
                   <div className="tech-item">
-                    <div className="mysql-icon">🐬</div>
+                    <FontAwesomeIcon icon={faSwift} />
+                    <span>Swift</span>
+                  </div>
+                  <div className="tech-item">
+                    <div className="dotnet-icon">.NET</div>
+                    <span>.NET</span>
+                  </div>
+                  <div className="tech-item">
+                    <FontAwesomeIcon icon={faDatabase} />
                     <span>MySQL</span>
                   </div>
                 </div>
@@ -249,36 +265,25 @@ export default function App() {
 
                   <button className="button" type="submit">Send</button>
                 </form>
-
-                <div className="contact__social">
-                  <p>Want to reach out later and connect? Find me on social media!</p>
-                  <ul className="social">
-                    <li>
-                      <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faLinkedin} /> LinkedIn
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faGithub} /> GitHub
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faFacebook} /> Facebook
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer">
-                        <FontAwesomeIcon icon={faInstagram} /> Instagram
-                      </a>
-                    </li>
-                  </ul>
-                </div>
               </div>
             </div>
           </section>
         </main>
+
+        <aside className="social-sidebar">
+          <a href="https://github.com/notfoolish" target="_blank" rel="noopener noreferrer" title="GitHub">
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://facebook.com/your-profile" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
+          <a href="https://instagram.com/your-profile" target="_blank" rel="noopener noreferrer" title="Instagram">
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
+        </aside>
       </div>
     </div>
   )
