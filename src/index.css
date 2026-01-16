@@ -1,0 +1,51 @@
+/* Global styles */
+
+:root {
+  color-scheme: dark;
+
+  /* strict black + white tokens */
+  --bg: #000;
+  --text: #fff;
+  --muted: rgba(255, 255, 255, 0.75);
+  --card: #000;
+  --border: rgba(255, 255, 255, 0.2);
+  --accent: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  background: transparent;
+  color: var(--text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text);
+}
+
+h1,
+h2 {
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
