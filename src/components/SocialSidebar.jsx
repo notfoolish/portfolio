@@ -15,12 +15,12 @@ export default function SocialSidebar() {
     <aside className={`social-sidebar ${isExpanded ? 'expanded' : 'collapsed'}`}>
       <button 
         className="toggle-button" 
+        type="button"
         onClick={() => setIsExpanded(!isExpanded)}
         aria-label={isExpanded ? 'Hide sidebar' : 'Show sidebar'}
       >
         <FontAwesomeIcon icon={isExpanded ? faChevronLeft : faChevronRight} />
-      </button>
-      <div className="social-links">
+      </button>      <div className="social-links">
         <a href="https://github.com/notfoolish" target="_blank" rel="noopener noreferrer" title="GitHub">
           <FontAwesomeIcon icon={faGithub} />
         </a>

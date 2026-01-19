@@ -17,8 +17,32 @@ import {
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
 import './TechStack.css'
+import { NAV_HEIGHT } from '../constants'
 
-const NAV_HEIGHT = 72
+const frontendTech = [
+  { icon: faReact, name: 'React' },
+  { icon: faJs, name: 'JavaScript' },
+  { icon: faHtml5, name: 'HTML5' },
+  { icon: null, name: 'Tailwind' },
+  { icon: faBolt, name: 'Vite' },
+]
+
+const backendTech = [
+  { icon: faNode, name: 'Node.js' },
+  { icon: faPhp, name: 'PHP' },
+  { icon: faJava, name: 'Java' },
+  { icon: faSwift, name: 'Swift' },
+  { icon: null, name: '.NET' },
+  { icon: faDatabase, name: 'MySQL' },
+]
+
+const toolsTech = [
+  { icon: faUnity, name: 'Unity' },
+  { icon: null, name: 'C#' },
+  { icon: faFigma, name: 'Figma' },
+  { icon: faJira, name: 'Jira' },
+  { icon: faGithub, name: 'GitHub' },
+]
 
 export default function TechStack() {
   return (
@@ -28,79 +52,36 @@ export default function TechStack() {
         <div className="tech-section">
           <h4>Frontend</h4>
           <div className="tech-grid">
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faReact} />
-              <span>React</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faJs} />
-              <span>JavaScript</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faHtml5} />
-              <span>HTML5</span>
-            </div>
-            <div className="tech-item">
-              <span>Tailwind</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faBolt} />
-              <span>Vite</span>
-            </div>
+            {frontendTech.map((tech, index) => (
+              <div key={tech.name} className="tech-item" style={{ '--i': index }}>
+                {tech.icon && <FontAwesomeIcon icon={tech.icon} />}
+                <span>{tech.name}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="tech-section">
           <h4>Backend</h4>
           <div className="tech-grid">
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faNode} />
-              <span>Node.js</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faPhp} />
-              <span>PHP</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faJava} />
-              <span>Java</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faSwift} />
-              <span>Swift</span>
-            </div>
-            <div className="tech-item">
-              <span>.NET</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faDatabase} />
-              <span>MySQL</span>
-            </div>
+            {backendTech.map((tech, index) => (
+              <div key={tech.name} className="tech-item" style={{ '--i': index }}>
+                {tech.icon && <FontAwesomeIcon icon={tech.icon} />}
+                <span>{tech.name}</span>
+              </div>
+            ))}
           </div>
         </div>
 
         <div className="tech-section">
           <h4>Tools & Other</h4>
           <div className="tech-grid">
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faUnity} />
-              <span>Unity</span>
-            </div>
-            <div className="tech-item">
-              <span>C#</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faFigma} />
-              <span>Figma</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faJira} />
-              <span>Jira</span>
-            </div>
-            <div className="tech-item">
-              <FontAwesomeIcon icon={faGithub} />
-              <span>GitHub</span>
-            </div>
+            {toolsTech.map((tech, index) => (
+              <div key={tech.name} className="tech-item" style={{ '--i': index }}>
+                {tech.icon && <FontAwesomeIcon icon={tech.icon} />}
+                <span>{tech.name}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>

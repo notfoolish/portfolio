@@ -1,25 +1,27 @@
 import './Projects.css'
-
-const NAV_HEIGHT = 72
+import bitfightersImg from '../assets/bitfighters.png'
+import devmatchImg from '../assets/devmatch.png'
+import homeappImg from '../assets/homeapp.png'
+import { NAV_HEIGHT } from '../constants'
 
 const projectsData = [
   {
     title: "BitFighters",
     description: "A 2D wave-based survival game made in Unity.",
     link: "https://bitfighters.eu",
-    image: "./src/assets/bitfighters.png"
+    image: bitfightersImg
   },
   {
     title: "DevMatch",
     description: "A platform connecting developers with job listings based on your GitHub profile.",
     link: "https://github.com/notfoolish/DevMatch",
-    image: "./src/assets/devmatch.png"
+    image: devmatchImg
   },
   {
     title: "HomeApp",
     description: "",
     link: "https://github.com/notfoolish/HomeApp",
-    image: "./src/assets/homeapp.png"
+    image: homeappImg
   }
 ]
 
@@ -28,7 +30,7 @@ export default function Projects() {
     <section id="projects" className="section" style={{ scrollMarginTop: NAV_HEIGHT + 16 }}>
       <div className="container">
         <h2>Projects</h2>
-        
+
         <div className="project-grid">
           {projectsData.map((project, index) => (
             <div key={index} className="project-card">

@@ -2,9 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDna, faCode, faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
 import './About.css'
-
-
-const NAV_HEIGHT = 72
+import { NAV_HEIGHT } from '../constants'
 
 export default function About() {
   return (
@@ -17,24 +15,20 @@ export default function About() {
         </h2>
         <div className="about-content">
           <div className="about-main">
-            <b><u>Technical Tinkerer</u></b>
+            <h3>Technical Tinkerer</h3>
             <p>
-              <br />
               I've been taking things apart and putting them back together <b>since I was 8</b>. Started with <b>broken laptops</b>, moved on to building <b>custom PCs</b>, and now at <b>20</b> I'm building <b>web applications</b>. That early curiosity turned into a lifelong obsession with understanding how systems work.
             </p>
-            <b><u>Built on Independence</u></b>
+            <h3>Built on Independence</h3>
             <p>
-              <br />
               At <b>16</b>, I started <b>living independently</b>, juggling <b>school, work, and responsibilities</b>. Managing my own life while taking care of others taught me resilience, time management, and the importance of reliable skills that serve me every day as a developer. When you're responsible for yourself and others, you learn to solve problems efficiently and think several steps ahead.
             </p>
-            <b><u>From Hardware to Software</u></b>
+            <h3>From Hardware to Software</h3>
             <p>
-              <br />
               Between school and work, coding became <b>more than a hobby</b>. It became a <b>career path</b>. The same <b>troubleshooting mindset</b> that helped me fix hardware now helps me debug code and architect solutions. When you've spent years <b>troubleshooting Windows systems</b> and optimizing performance, transitioning to <b>fullstack development</b> feels natural.
             </p>
-            <b><u>Life Outside the Code</u></b>
+            <h3>Life Outside the Code</h3>
             <p>
-              <br />
               <b>Balance</b> is everything. Soccer, hiking, pool, and the gym keep me grounded and sharp. The same <b>discipline</b> that got me through working while studying now keeps me <b>focused during long debugging sessions</b>. Physical activity clears my mind, and honestly, some of my best solutions come to me on the soccer field or during a hike.
             </p>
           </div>

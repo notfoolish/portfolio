@@ -1,13 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-scroll'
 import './Navbar.css'
 import CV from '../assets/Laszlo_Akos_CV.pdf'
-
-const NAV_HEIGHT = 72
+import { NAV_HEIGHT } from '../constants'
 
 export default function Navbar() {
   const [isVisible, setIsVisible] = useState(true)
-  const [lastScrollY, setLastScrollY] = useState(0)
+  const lastScrollYRef = useRef(0)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,18 +14,18 @@ export default function Navbar() {
       
       if (currentScrollY < 10) {
         setIsVisible(true)
-      } else if (currentScrollY > lastScrollY) {
+      } else if (currentScrollY > lastScrollYRef.current) {
         setIsVisible(false)
       } else {
         setIsVisible(true)
       }
       
-      setLastScrollY(currentScrollY)
+      lastScrollYRef.current = currentScrollY
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [lastScrollY])
+  }, [])
 
   const handleResumeClick = () => {
     const link = document.createElement('a')
@@ -41,7 +40,6 @@ export default function Navbar() {
       <Link to="tech" smooth={true} duration={500} offset={-NAV_HEIGHT}>Tech Stack</Link>
       <Link to="projects" smooth={true} duration={500} offset={-NAV_HEIGHT}>Projects</Link>
       <Link to="contact" smooth={true} duration={500} offset={-NAV_HEIGHT}>Contact</Link>
-      <a onClick={handleResumeClick}>Resume</a>
-    </nav>
+      <button type="button" onClick={handleResumeClick} className="nav-button">Resume</button>    </nav>
   )
 }

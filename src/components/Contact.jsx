@@ -5,8 +5,7 @@ import {
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 import './Contact.css'
-
-const NAV_HEIGHT = 72
+import { NAV_HEIGHT } from '../constants'
 
 export default function Contact() {
   return (
