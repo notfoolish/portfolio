@@ -1,7 +1,6 @@
 import './App.css'
 import Background from './components/Background'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
 import About from './components/About'
 import TechStack from './components/TechStack'
 import Projects from './components/Projects'
@@ -17,7 +16,6 @@ export default function App() {
         <Navbar />
 
         <main>
-          <Hero />
           <About />
           <TechStack />
           <Projects />

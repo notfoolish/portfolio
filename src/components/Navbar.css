@@ -1,0 +1,49 @@
+.nav {
+  position: sticky;
+  top: 16px;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  flex-wrap: wrap;
+  transition: transform 0.9s ease, opacity 0.9s ease;
+}
+
+.nav.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.nav.hidden {
+  transform: translateY(-120px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    gap: 16px;
+    padding: 24px;
+  }
+}
+
+.nav a {
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  color: var(--muted);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: var(--text);
+  border-color: rgba(141, 125, 202, 0.8);
+  background: rgba(141, 125, 202, 0.15);
+  transform: translateY(-2px);
+}

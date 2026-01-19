@@ -1,0 +1,133 @@
+.contact {
+  margin-top: 16px;
+  width: min(720px, 100%);
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 18px;
+  display: grid;
+  gap: 18px;
+}
+
+.contact__info,
+.contact__form,
+.contact__social {
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.contact-text-block {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(141, 125, 202, 0.15);
+}
+
+.contact-text-block p:last-child {
+  margin-bottom: 0;
+}
+
+.contact__info a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.35);
+  text-underline-offset: 3px;
+}
+
+.contact__form {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-form-intro {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 16px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(141, 125, 202, 0.15);
+  margin-bottom: 8px;
+}
+
+.contact-form-intro p {
+  margin: 0;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--text);
+  outline: none;
+}
+
+.field input:focus,
+.field textarea:focus {
+  border-color: #fff;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+
+.button {
+  justify-self: start;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #fff;
+  color: #000;
+}
+
+.social {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.social a {
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+}
+
+.social a:hover {
+  border-color: #fff;
+}
+
+.contact p svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.125em;
+  margin-right: 8px;
+}
+
+@media (max-width: 720px) {
+  .contact {
+    width: 100%;
+  }
+}

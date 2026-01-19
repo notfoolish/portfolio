@@ -1,9 +1,6 @@
-/* Global styles */
-
 :root {
   color-scheme: dark;
 
-  /* strict black + white tokens */
   --bg: #000;
   --text: #fff;
   --muted: rgba(255, 255, 255, 0.75);

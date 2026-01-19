@@ -1,0 +1,129 @@
+.projects-intro {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px 32px;
+  border-radius: 12px;
+  border: 1px solid rgba(141, 125, 202, 0.2);
+  margin-top: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.projects-intro p {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.project-grid {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  height: 350px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.project-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.3;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-image {
+  opacity: 0.15;
+}
+
+.project-content {
+  flex: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
+}
+
+.project-card:hover .project-title {
+  opacity: 0.3;
+}
+
+.project-description {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  text-align: center;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--text-primary);
+  color: var(--background);
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.project-button:hover {
+  background: var(--text-secondary);
+  transform: scale(1.05);
+}
+
+@media (max-width: 720px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

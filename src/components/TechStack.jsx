@@ -16,6 +16,7 @@ import {
   faSwift,
   faGithub,
 } from '@fortawesome/free-brands-svg-icons'
+import './TechStack.css'
 
 const NAV_HEIGHT = 72
 
@@ -40,7 +41,6 @@ export default function TechStack() {
               <span>HTML5</span>
             </div>
             <div className="tech-item">
-              <div className="tailwind-icon"> </div>
               <span>Tailwind</span>
             </div>
             <div className="tech-item">
@@ -70,7 +70,6 @@ export default function TechStack() {
               <span>Swift</span>
             </div>
             <div className="tech-item">
-              <div className="dotnet-icon">.NET</div>
               <span>.NET</span>
             </div>
             <div className="tech-item">
@@ -88,7 +87,6 @@ export default function TechStack() {
               <span>Unity</span>
             </div>
             <div className="tech-item">
-              <div className="csharp-icon">C#</div>
               <span>C#</span>
             </div>
             <div className="tech-item">

@@ -4,6 +4,7 @@ import {
   faPhone,
   faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
+import './Contact.css'
 
 const NAV_HEIGHT = 72
 
@@ -15,22 +16,26 @@ export default function Contact() {
 
         <div className="contact">
           <div className="contact__info">
-            <p>I'm always open to discussing new projects or opportunities.</p>
-            <p>
-              <FontAwesomeIcon icon={faEnvelope} />{' '}
-              Email: <a href="mailto:alosos398@gmail.com">alosos398@gmail.com</a>
-            </p>
-            <p>
-              <FontAwesomeIcon icon={faPhone} />{' '}
-              Phone: <a href="tel:+36703269157">+36 70 326 9157</a>
-            </p>
+            <div className="contact-text-block">
+              <p>I'm always open to discussing new projects or opportunities.</p>
+              <p>
+                <FontAwesomeIcon icon={faEnvelope} />{' '}
+                Email: <a href="mailto:alosos398@gmail.com">alosos398@gmail.com</a>
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faPhone} />{' '}
+                Phone: <a href="tel:+36703269157">+36 70 326 9157</a>
+              </p>
+            </div>
           </div>
 
           <form className="contact__form" action="#" method="POST">
-            <p>
-              <FontAwesomeIcon icon={faPaperPlane} />{' '}
-              Want to contact me right now? Fill out this form.
-            </p>
+            <div className="contact-form-intro">
+              <p>
+                <FontAwesomeIcon icon={faPaperPlane} />{' '}
+                Want to contact me right now? Fill out this form.
+              </p>
+            </div>
 
             <div className="field">
               <label htmlFor="name">Name</label>

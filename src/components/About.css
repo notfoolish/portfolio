@@ -1,0 +1,124 @@
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 48px;
+  margin-top: 32px;
+}
+
+.about-main {
+  max-width: 700px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 32px;
+  border-radius: 16px;
+  border: 1px solid rgba(141, 125, 202, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+.about-main p {
+  font-size: 1.125rem;
+  line-height: 1.8;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.about-main p:last-of-type {
+  margin-bottom: 0;
+}
+
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.about-card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(0, 0, 0, 0.35);
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  border-color: rgba(141, 125, 202, 0.6);
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.about-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  margin: 0 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.about-card h3 svg {
+  font-size: 1rem;
+  color: currentColor;
+}
+
+.about-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.about-card li {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.85);
+  padding-left: 16px;
+  position: relative;
+}
+
+.about-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: rgba(141, 125, 202, 0.8);
+  font-weight: bold;
+}
+
+#home h2 {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#home h2 svg {
+  width: 1em;
+  height: 1em;
+}
+
+@media (max-width: 968px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .about-sidebar {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about-card {
+    flex: 1 1 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .about-sidebar {
+    flex-direction: column;
+  }
+
+  .about-main p {
+    font-size: 1rem;
+  }
+}
