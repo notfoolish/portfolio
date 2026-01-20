@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faEnvelope,
   faPhone,
-  faPaperPlane,
 } from '@fortawesome/free-solid-svg-icons'
 import './Contact.css'
 import { NAV_HEIGHT } from '../constants'
@@ -27,32 +26,6 @@ export default function Contact() {
               </p>
             </div>
           </div>
-
-          <form className="contact__form" action="#" method="POST">
-            <div className="contact-form-intro">
-              <p>
-                <FontAwesomeIcon icon={faPaperPlane} />{' '}
-                Want to contact me right now? Fill out this form.
-              </p>
-            </div>
-
-            <div className="field">
-              <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-
-            <div className="field">
-              <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea id="message" name="message" rows="4" required />
-            </div>
-
-            <button className="button" type="submit">Send</button>
-          </form>
         </div>
       </div>
     </section>
