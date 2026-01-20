@@ -17,10 +17,21 @@
 .about-main h3 {
   font-size: 1.125rem;
   font-weight: 700;
-  text-decoration: underline;
   margin-top: 24px;
   margin-bottom: 12px;
   color: rgba(255, 255, 255, 0.95);
+}
+
+.about-main h3::before {
+  content: '[ ';
+  color: rgba(141, 125, 202, 1.0);
+  font-weight: 600;
+}
+
+.about-main h3::after {
+  content: ' ]';
+  color: rgba(141, 125, 202, 1.0);
+  font-weight: 600;
 }
 
 .about-main h3:first-child {
@@ -50,6 +61,7 @@
   background: rgba(0, 0, 0, 0.35);
   padding: 20px;
   transition: all 0.3s ease;
+  user-select: none;
 }
 
 .about-card:hover {

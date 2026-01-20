@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot, faDna, faCode, faDumbbell } from '@fortawesome/free-solid-svg-icons'
 import { faReact } from '@fortawesome/free-brands-svg-icons'
+import { TypeAnimation } from 'react-type-animation'
+import { motion } from 'framer-motion'
 import './About.css'
 import { NAV_HEIGHT } from '../constants'
 
@@ -8,7 +10,14 @@ export default function About() {
   return (
     <section id="about" className="section" style={{ scrollMarginTop: NAV_HEIGHT + 16 }}>
       <div className="container">
-        <h1>Hi, I'm László Ákos</h1>
+        <h1>
+          <TypeAnimation
+            sequence={["Hi, I'm László Ákos"]}
+            wrapper="span"
+            speed={25}
+            cursor={true}
+          />
+        </h1>
         <h2>
           <FontAwesomeIcon icon={faLocationDot} />
           Pécs, Hungary
@@ -34,7 +43,13 @@ export default function About() {
           </div>
 
           <div className="about-sidebar">
-            <div className="about-card">
+            <motion.div 
+              className="about-card"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+            >
               <h3><FontAwesomeIcon icon={faDna} /> Technical DNA</h3>
               <ul>
                 <li>Hardware repairing since the age of 8</li>
@@ -42,9 +57,15 @@ export default function About() {
                 <li>Windows modding</li>
                 <li>Fullstack development</li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="about-card">
+            <motion.div 
+              className="about-card"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+            >
               <h3><FontAwesomeIcon icon={faCode} /> What I Do</h3>
               <ul>
                 <li>React applications</li>
@@ -52,9 +73,15 @@ export default function About() {
                 <li>System optimization</li>
                 <li>Backend solutions with Express.js, MongoDB, PHP</li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="about-card">
+            <motion.div 
+              className="about-card"
+              initial={{ x: -50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
               <h3><FontAwesomeIcon icon={faReact} /> Why React?</h3>
               <ul>
                 <li>Component modularity</li>
@@ -62,9 +89,15 @@ export default function About() {
                 <li>Rich ecosystem</li>
                 <li>Great developer experience</li>
               </ul>
-            </div>
+            </motion.div>
 
-            <div className="about-card">
+            <motion.div 
+              className="about-card"
+              initial={{ x: 50, opacity: 0 }}
+              whileInView={{ x: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
               <h3><FontAwesomeIcon icon={faDumbbell} /> Beyond Code</h3>
               <ul>
                 <li>Soccer player</li>
@@ -72,7 +105,7 @@ export default function About() {
                 <li>Pool player</li>
                 <li>Gym regular</li>
               </ul>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

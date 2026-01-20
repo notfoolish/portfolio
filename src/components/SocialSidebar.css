@@ -43,6 +43,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  user-select: none;
 }
 
 .social-sidebar .toggle-button:hover {
@@ -64,6 +65,7 @@
   color: var(--muted);
   font-size: 20px;
   transition: all 0.2s ease;
+  user-select: none;
 }
 
 .social-sidebar a:hover {
