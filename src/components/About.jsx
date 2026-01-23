@@ -10,14 +10,16 @@ export default function About() {
   return (
     <section id="about" className="section" style={{ scrollMarginTop: NAV_HEIGHT + 16 }}>
       <div className="container">
-        <h1>
-          <TypeAnimation
-            sequence={["Hi, I'm László Ákos"]}
-            wrapper="span"
-            speed={25}
-            cursor={true}
-          />
-        </h1>
+        <div className="about-header">
+          <h1>
+            <TypeAnimation
+              sequence={["Hi, I'm László Ákos"]}
+              wrapper="span"
+              speed={25}
+              cursor={true}
+            />
+          </h1>
+        </div>
         <h2>
           <FontAwesomeIcon icon={faLocationDot} />
           Pécs, Hungary

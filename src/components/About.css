@@ -1,3 +1,10 @@
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex-wrap: wrap;
+}
+
 .about-content {
   display: grid;
   grid-template-columns: 1fr 380px;
